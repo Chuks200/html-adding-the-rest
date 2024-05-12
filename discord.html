@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Discord Layout Example</title>
+<link rel="stylesheet" href="discord_example.css">
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        display: grid;
+        grid-template-areas:
+            "sidebar header"
+            "sidebar main-content"
+            "sidebar footer";
+        grid-template-columns: 240px 1fr;
+        grid-template-rows: 50px 1fr 30px;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+    }
+    .header { 
+        background-color: #7289da; 
+        grid-area: header; 
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+    }
+    .sidebar { 
+        background-color: #2c2f33; 
+        grid-area: sidebar; 
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        color: white;
+    }
+    .main-content { 
+        background-color: #36393f; 
+        grid-area: main-content; 
+        padding: 20px;
+        color: white;
+        overflow: auto;
+
+        
+    }
+
+    .footer { 
+        background-color: #23272a; 
+        grid-area: footer; 
+        text-align: center;
+        color: white;
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+<div class="sidebar">
+    <div>Server List</div>
+    <div>Channel 1</div>
+    <div>Channel 2</div>
+    <div>Channel 3</div>
+</div>
+<div class="main-content">
+    <div>Message from User 1</div>
+    <div>Message from User 2</div>
+    <div>Message from User 3</div>
+    <!-- More chat messages -->
+</div>
+<div class="header">Discord App</div>
+<div class="footer">Footer Info</div>
+</body>
+</html>
